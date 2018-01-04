@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Susankya Dashboard</title>
+
+</head>
+<body>
+<h1>Welcome to Susankya Dashboard </h1>
+{% if user.is_authenticated %}
+<p>Hi, {{user.username}}</p>
+{% endif %}
+<p><a href="{% url 'logout' %}">Logout</a></p>
+</body>
+</html>
