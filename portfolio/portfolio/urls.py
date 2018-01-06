@@ -22,6 +22,7 @@ from lib import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^members/', views.MemberList.as_view()),
+    url(r'^book_id/(?P<pk>[0-9]+)/$', views.BookList_id),
     url(r'^books/', views.BookList.as_view()),
     url(r'^dates/', views.ReturnDateList.as_view()),
     url(r'^issue/', views.IssueDetailList.as_view()),

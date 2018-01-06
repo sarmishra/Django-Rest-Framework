@@ -31,12 +31,12 @@ class Book(models.Model):
 class BooksDetail(models.Model):
     """This model stores the information about the copies of the same book available in the Library."""
     code=models.CharField(max_length=50,unique=True)
-    book=models.ForeignKey(Book)
+    book=models.ForeignKey(Book, related_name='tracks', on_delete=models.CASCADE)
     isIssued=models.BooleanField(default=False)
 
 class IssueDetail(models.Model):
     """This model contains the detail about the transaction i.e the detail like when a student issued a book and when did he return it"""
-    member=models.ForeignKey(Member)
+    member=models.ForeignKey(Member, related_name='tracks', on_delete=models.CASCADE)
     books_detail=models.ForeignKey(BooksDetail)
     issue_date=models.DateTimeField()
     return_date=models.DateTimeField(blank=True,null=True)
