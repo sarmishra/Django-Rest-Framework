@@ -1,6 +1,3 @@
+# Django-Rest-Framework
 
-#Django Rest Framework
-Serialization, 
-Nested Serialization,
-POST AND GET operation using POSTMAN
-
+This is a Django Rest Framework using serialization, nested serialization, post, and get operation using Postman. 
